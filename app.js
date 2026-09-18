@@ -244,24 +244,20 @@ async function renderInvest(session) {
 
 function renderLoad(session) {
   const invoices = session.user.invoices || [];
-  $("load-result").innerHTML = invoices
-    .slice()
-    .reverse()
-    .map((inv) => {
-      const pay =
-        inv.status === "complete" || inv.credited
-          ? `<span class="ok">Credited</span>`
-          : `<button class="btn ghost" data-pay="${inv.id}">Refresh BitPay status</button>`;
-      const link = inv.url && !String(inv.url).startsWith("#")
-        ? `<a class="btn ghost" href="${inv.url}" target="_blank" rel="noopener">Open BitPay</a>`
-        : "";
-      return `<article class="tile" style="margin-bottom:0.75rem;">
-        <h3>$${inv.price} · ${escapeHtml(inv.status)}</h3>
-        <p>${escapeHtml(inv.note || inv.itemDesc || "BitPay invoice")}${inv.error ? " — " + escapeHtml(inv.error) : ""}</p>
-        <div class="hero-actions" style="margin-top:0.75rem;">${link}${pay}</div>
-      </article>`;
-    })
-    .join("") || `<p class="muted">No invoices yet.</p>`;
+  const retry = session.user.foundingPaid
+    ? ""
+    : `<p class="error">Founding package is not posted yet. Marqeta must be connected.</p>
+       <button class="btn gold" id="retry-founding" type="button">Retry founding load</button>`;
+  $("load-result").innerHTML =
+    retry +
+    (invoices
+      .slice()
+      .reverse()
+      .map((inv) => `<article class="tile" style="margin-bottom:0.75rem;">
+        <h3>$${inv.price} · ${escapeHtml(inv.status || "complete")}</h3>
+        <p>Marqeta GPA ${escapeHtml(inv.gpaToken || inv.id)}</p>
+      </article>`)
+      .join("") || `<p class="muted">No loads yet.</p>`);
 }
 
 function renderCard(session) {
@@ -491,10 +487,10 @@ $("form-load").addEventListener("submit", async (e) => {
 });
 
 $("load-result").addEventListener("click", async (e) => {
-  const btn = e.target.closest("[data-pay]");
-  if (!btn) return;
+  if (e.target.id !== "retry-founding") return;
+  $("load-error").textContent = "";
   try {
-    await api("api/load/" + btn.dataset.pay + "/status", { method: "POST" });
+    await api("api/founding", { method: "POST" });
     await go();
   } catch (ex) {
     $("load-error").textContent = ex.message;

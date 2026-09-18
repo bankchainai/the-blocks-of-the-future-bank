@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Blocks of the Future Bank</title>
-  <meta name="description" content="BankChainAI teaching bank on the TBOTF chain. BitPay account loads, Marqeta debit cards, and an Ethereum-style explorer." />
+  <meta name="description" content="BankChainAI teaching bank on the TBOTF chain. Marqeta debit cards and account loads, Ethereum-style explorer." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;650&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -12,7 +12,7 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="banner">TBOTF chain · BitPay loads · Marqeta debit · not a chartered bank · not FDIC insured</div>
+  <div class="banner">TBOTF chain · Marqeta debit and loads · not a chartered bank · not FDIC insured</div>
   <header class="nav">
     <a class="brand" href="#/">
       <div class="mark" aria-hidden="true">B</div>
@@ -43,7 +43,7 @@
         <div>
           <div class="kicker">Teaching bank on a public chain</div>
           <h1>Learn to invest for profit. Settle it on the blocks of the future.</h1>
-          <p class="lede">Pay $500 with BitPay to open. $125 cash and $125 BANK coin post to your ledger; $250 funds platform build and extra security. Load more with BitPay. Spend on a Marqeta debit. Every move hits the explorer.</p>
+          <p class="lede">Open a $500 founding membership on Marqeta. $125 cash loads the debit card, $125 BANK coin posts on-chain, $250 funds platform build and extra security. Every move hits the explorer.</p>
           <div class="hero-actions">
             <a class="btn gold" href="#/open">Open an account</a>
             <a class="btn ghost" href="#/explorer">Open the explorer</a>
@@ -57,7 +57,7 @@
             <div class="split-row"><span>Platform + security reserve</span><span class="amt">$250</span></div>
             <div class="split-row"><span>Treasury total</span><span class="amt">$500</span></div>
           </div>
-          <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">Settles through BitPay. Additional loads use the same rail.</p>
+          <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">Cash settles onto the Marqeta card from the program funding source.</p>
         </aside>
       </div>
       <div class="section alt">
@@ -66,7 +66,7 @@
         <div class="grid-3" style="margin-top:1.5rem;">
           <article class="tile"><h3>Explorer</h3><p>Blocks, transactions, and addresses — the same layout customers know from Etherscan.</p></article>
           <article class="tile"><h3>Smart investing</h3><p>Six short lessons, then a recommended mix of cash, BANK, ETH, and BTC.</p></article>
-          <article class="tile"><h3>BitPay</h3><p>Crypto invoices to open and load the cash ledger.</p></article>
+          <article class="tile"><h3>Loads</h3><p>Marqeta GPA orders load cash onto the member debit card.</p></article>
           <article class="tile"><h3>Marqeta</h3><p>Debit cards issued on the Marqeta program, with freeze and spend controls.</p></article>
           <article class="tile"><h3>On-chain audit</h3><p>Every grant, load, trade, lesson, and card event is mined into TBOTF.</p></article>
           <article class="tile"><h3>Treasury</h3><p>The $250 reserve per founding account funds build-out and extra security.</p></article>
@@ -77,7 +77,7 @@
     <section class="section hidden" data-page="open">
       <div class="kicker">New founding member</div>
       <h2>Open an account</h2>
-      <p class="lede">Pay $500 with BitPay. $125 cash and $125 BANK post to your ledger; $250 goes to treasury for build and security.</p>
+      <p class="lede">Marqeta issues the debit and loads $125 cash. $125 BANK posts on-chain. $250 stays in treasury for build and security.</p>
       <form class="form" id="form-open" style="margin-top:1.5rem;">
         <label for="name">Full name</label>
         <input id="name" name="name" type="text" autocomplete="name" required />
@@ -87,7 +87,7 @@
         <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required />
         <label class="check">
           <input id="agree" type="checkbox" />
-          <span>I understand this is not a chartered bank, balances are not FDIC insured, and BitPay/Marqeta process payments and cards under their programs.</span>
+          <span>I understand this is not a chartered bank, balances are not FDIC insured, and Marqeta issues the debit card and card loads under its bank-partner program.</span>
         </label>
         <p class="error" id="open-error" role="alert"></p>
         <button class="btn gold" id="open-btn" type="submit">Create account</button>
@@ -122,7 +122,7 @@
         <div class="bal"><div class="label">Portfolio</div><div class="value" id="bal-total">$0</div></div>
       </div>
       <div class="hero-actions" style="margin-top:1.25rem;">
-        <a class="btn gold" href="#/load">Load with BitPay</a>
+        <a class="btn gold" href="#/load">Load card</a>
         <a class="btn ghost" href="#/invest">Invest desk</a>
         <a class="btn ghost" href="#/card">Marqeta card</a>
       </div>
@@ -202,9 +202,9 @@
     </section>
 
     <section class="section hidden" data-page="load">
-      <div class="kicker">BitPay</div>
-      <h2>Load your cash ledger</h2>
-      <p class="lede">BitPay invoices crypto at a locked rate. The ledger credits when BitPay marks the invoice paid.</p>
+      <div class="kicker">Marqeta</div>
+      <h2>Load your card</h2>
+      <p class="lede">Loads post to the Marqeta card from the program funding source, then credit the cash ledger and the explorer.</p>
       <form class="form" id="form-load">
         <label for="load-amt">Amount (USD)</label>
         <select id="load-amt">
@@ -214,7 +214,7 @@
           <option value="250">$250</option>
         </select>
         <p class="error" id="load-error" role="alert"></p>
-        <button class="btn gold" type="submit">Create BitPay invoice</button>
+        <button class="btn gold" type="submit">Load with Marqeta</button>
       </form>
       <div id="load-result" style="margin-top:1.25rem;"></div>
     </section>
@@ -231,7 +231,7 @@
       <div class="legal">
         <div class="kicker">Disclosures</div>
         <h2>Not a chartered bank.</h2>
-        <p>The Blocks of the Future Bank is a BankChainAI product. It is not an FDIC-insured depository. Crypto loads are processed by BitPay. Debit cards are issued through Marqeta under their bank-partner program.</p>
+        <p>The Blocks of the Future Bank is a BankChainAI product. It is not an FDIC-insured depository. Debit cards and cash loads are issued through Marqeta under its bank-partner program.</p>
         <p>The $500 founding package is treasury funding: $125 cash, $125 BANK coin, $250 platform and security reserve.</p>
         <p>Questions: Theblocksofthefuture@gmail.com</p>
       </div>

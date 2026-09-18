@@ -249,15 +249,15 @@ function renderLoad(session) {
     .reverse()
     .map((inv) => {
       const pay =
-        inv.status === "complete"
+        inv.status === "complete" || inv.credited
           ? `<span class="ok">Credited</span>`
-          : `<button class="btn gold" data-pay="${inv.id}">Mark invoice paid</button>`;
+          : `<button class="btn ghost" data-pay="${inv.id}">Refresh BitPay status</button>`;
       const link = inv.url && !String(inv.url).startsWith("#")
         ? `<a class="btn ghost" href="${inv.url}" target="_blank" rel="noopener">Open BitPay</a>`
         : "";
       return `<article class="tile" style="margin-bottom:0.75rem;">
         <h3>$${inv.price} · ${escapeHtml(inv.status)}</h3>
-        <p>${escapeHtml(inv.note || "BitPay invoice")}</p>
+        <p>${escapeHtml(inv.note || inv.itemDesc || "BitPay invoice")}${inv.error ? " — " + escapeHtml(inv.error) : ""}</p>
         <div class="hero-actions" style="margin-top:0.75rem;">${link}${pay}</div>
       </article>`;
     })
@@ -267,7 +267,7 @@ function renderLoad(session) {
 function renderCard(session) {
   const cards = session.user.cards || [];
   if (!cards.length) {
-    $("card-view").innerHTML = `<button class="btn gold" id="issue-card">Issue Marqeta virtual debit</button>`;
+    $("card-view").innerHTML = `<button class="btn gold" id="issue-card">Issue Marqeta debit card</button>`;
     return;
   }
   const c = cards[0];
@@ -494,7 +494,7 @@ $("load-result").addEventListener("click", async (e) => {
   const btn = e.target.closest("[data-pay]");
   if (!btn) return;
   try {
-    await api("api/load/" + btn.dataset.pay + "/sandbox-pay", { method: "POST" });
+    await api("api/load/" + btn.dataset.pay + "/status", { method: "POST" });
     await go();
   } catch (ex) {
     $("load-error").textContent = ex.message;

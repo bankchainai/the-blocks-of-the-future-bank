@@ -43,7 +43,7 @@
         <div>
           <div class="kicker">Teaching bank on a public chain</div>
           <h1>Learn to invest for profit. Settle it on the blocks of the future.</h1>
-          <p class="lede">Open a founding account funded from the BankChainAI treasury, load more with BitPay, spend on a Marqeta debit card, and watch every move on an Ethereum-style explorer.</p>
+          <p class="lede">Pay $500 with BitPay to open. $125 cash and $125 BANK coin post to your ledger; $250 funds platform build and extra security. Load more with BitPay. Spend on a Marqeta debit. Every move hits the explorer.</p>
           <div class="hero-actions">
             <a class="btn gold" href="#/open">Open an account</a>
             <a class="btn ghost" href="#/explorer">Open the explorer</a>
@@ -57,7 +57,7 @@
             <div class="split-row"><span>Platform + security reserve</span><span class="amt">$250</span></div>
             <div class="split-row"><span>Treasury total</span><span class="amt">$500</span></div>
           </div>
-          <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">Funded from project treasury. Additional loads settle through BitPay.</p>
+          <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">Settles through BitPay. Additional loads use the same rail.</p>
         </aside>
       </div>
       <div class="section alt">
@@ -66,8 +66,8 @@
         <div class="grid-3" style="margin-top:1.5rem;">
           <article class="tile"><h3>Explorer</h3><p>Blocks, transactions, and addresses — the same layout customers know from Etherscan.</p></article>
           <article class="tile"><h3>Smart investing</h3><p>Six short lessons, then a recommended mix of cash, BANK, ETH, and BTC.</p></article>
-          <article class="tile"><h3>BitPay</h3><p>Crypto invoices to load the cash ledger. Live invoices when the merchant token is set.</p></article>
-          <article class="tile"><h3>Marqeta</h3><p>Virtual Visa debit issued to the member, freeze and sandbox authorization included.</p></article>
+          <article class="tile"><h3>BitPay</h3><p>Crypto invoices to open and load the cash ledger.</p></article>
+          <article class="tile"><h3>Marqeta</h3><p>Debit cards issued on the Marqeta program, with freeze and spend controls.</p></article>
           <article class="tile"><h3>On-chain audit</h3><p>Every grant, load, trade, lesson, and card event is mined into TBOTF.</p></article>
           <article class="tile"><h3>Treasury</h3><p>The $250 reserve per founding account funds build-out and extra security.</p></article>
         </div>
@@ -77,7 +77,7 @@
     <section class="section hidden" data-page="open">
       <div class="kicker">New founding member</div>
       <h2>Open an account</h2>
-      <p class="lede">Treasury credits $125 cash and $125 BANK. You can load more with BitPay after sign-in.</p>
+      <p class="lede">Pay $500 with BitPay. $125 cash and $125 BANK post to your ledger; $250 goes to treasury for build and security.</p>
       <form class="form" id="form-open" style="margin-top:1.5rem;">
         <label for="name">Full name</label>
         <input id="name" name="name" type="text" autocomplete="name" required />
@@ -176,7 +176,7 @@
 
     <section class="section hidden" data-page="invest">
       <div class="kicker">Invest desk</div>
-      <h2>Paper book with a plan</h2>
+      <h2>Invest with a plan</h2>
       <p class="lede" id="invest-plan"></p>
       <div class="balances" id="invest-prices"></div>
       <form class="form" id="form-trade" style="margin-top:1.5rem;">
@@ -204,7 +204,7 @@
     <section class="section hidden" data-page="load">
       <div class="kicker">BitPay</div>
       <h2>Load your cash ledger</h2>
-      <p class="lede">BitPay invoices crypto at a locked rate. The ledger credits when the invoice completes. Production invoices require the BitPay merchant token.</p>
+      <p class="lede">BitPay invoices crypto at a locked rate. The ledger credits when BitPay marks the invoice paid.</p>
       <form class="form" id="form-load">
         <label for="load-amt">Amount (USD)</label>
         <select id="load-amt">
@@ -222,7 +222,7 @@
     <section class="section hidden" data-page="card">
       <div class="kicker">Marqeta</div>
       <h2>Virtual debit card</h2>
-      <p class="lede">Issued on the Marqeta program. Freeze it any time. Sandbox authorizations debit the cash ledger and post to the explorer.</p>
+      <p class="lede">Issued on the Marqeta program. Freeze any time. Authorizations debit cash and post to the explorer.</p>
       <div id="card-view"></div>
       <p class="error" id="card-error" role="alert"></p>
     </section>

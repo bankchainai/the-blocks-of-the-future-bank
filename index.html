@@ -4,29 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Blocks of the Future Bank</title>
-  <meta name="description" content="Demo portal for The Blocks of the Future Bank. Simulated founding accounts only — not a licensed bank and not FDIC insured." />
+  <meta name="description" content="BankChainAI teaching bank on the TBOTF chain. BitPay account loads, Marqeta debit cards, and an Ethereum-style explorer." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;650&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;650&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="banner">Demonstration ledger only · <strong>no real money is collected</strong> · not a licensed bank · not FDIC insured</div>
+  <div class="banner">TBOTF chain · BitPay loads · Marqeta debit · not a chartered bank · not FDIC insured</div>
   <header class="nav">
     <a class="brand" href="#/">
       <div class="mark" aria-hidden="true">B</div>
       <div>
         <div class="brand-name">The Blocks of the Future Bank</div>
-        <div class="brand-sub">BankChainAI · teaching bank on a chain</div>
+        <div class="brand-sub">BankChainAI · teach, invest, settle on-chain</div>
       </div>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#/">Home</a>
+      <a href="#/explorer">Explorer</a>
+      <a href="#/learn">Learn</a>
+      <a href="#/invest" id="nav-invest" class="hidden">Invest</a>
+      <a href="#/load" id="nav-load" class="hidden">Load</a>
+      <a href="#/card" id="nav-card" class="hidden">Card</a>
       <a href="#/open" id="nav-open">Open account</a>
       <a href="#/signin" id="nav-in">Sign in</a>
-      <a href="#/app" id="nav-app" class="hidden">My ledger</a>
-      <a href="#/admin" id="nav-admin" class="hidden">Admin reserve</a>
+      <a href="#/app" id="nav-app" class="hidden">Ledger</a>
+      <a href="#/admin" id="nav-admin" class="hidden">Treasury</a>
       <a href="#/legal">Disclosures</a>
       <a href="#/" id="nav-out" class="hidden">Sign out</a>
     </nav>
@@ -36,43 +41,43 @@
     <section data-page="home">
       <div class="hero">
         <div>
-          <div class="kicker">Founding member portal</div>
-          <h1>A bank you can study, not a vault that takes your cash.</h1>
-          <p class="lede">Open a simulated $500 founding package: $125 cash ledger, $125 BANK coin, and $250 reserved for platform build and extra security. This site does not accept live deposits.</p>
+          <div class="kicker">Teaching bank on a public chain</div>
+          <h1>Learn to invest for profit. Settle it on the blocks of the future.</h1>
+          <p class="lede">Open a founding account funded from the BankChainAI treasury, load more with BitPay, spend on a Marqeta debit card, and watch every move on an Ethereum-style explorer.</p>
           <div class="hero-actions">
-            <a class="btn gold" href="#/open">Open a demo account</a>
-            <a class="btn ghost" href="#/legal">Read the disclosures</a>
+            <a class="btn gold" href="#/open">Open an account</a>
+            <a class="btn ghost" href="#/explorer">Open the explorer</a>
           </div>
         </div>
-        <aside class="ledger-card" aria-label="Starter package split">
+        <aside class="ledger-card" aria-label="Founding package split">
           <h3>$500 founding package</h3>
           <div class="split">
             <div class="split-row"><span>Your cash ledger</span><span class="amt">$125</span></div>
             <div class="split-row"><span>Your BANK coin</span><span class="amt">$125</span></div>
             <div class="split-row"><span>Platform + security reserve</span><span class="amt">$250</span></div>
-            <div class="split-row"><span>Total modeled</span><span class="amt">$500</span></div>
+            <div class="split-row"><span>Treasury total</span><span class="amt">$500</span></div>
           </div>
-          <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">Credits post instantly on this demo. Nothing is withdrawn from a real bank, card, or wallet.</p>
+          <p class="muted" style="margin:1rem 0 0;font-size:0.85rem;">Funded from project treasury. Additional loads settle through BitPay.</p>
         </aside>
       </div>
       <div class="section alt">
-        <div class="kicker">How the platform is wired</div>
-        <h2>Six repos, one operating picture.</h2>
+        <div class="kicker">The operating picture</div>
+        <h2>Bank, school, and chain in one desk.</h2>
         <div class="grid-3" style="margin-top:1.5rem;">
-          <article class="tile"><h3>Platform</h3><p>Canonical BankChainAI repo and public customer site.</p></article>
-          <article class="tile"><h3>Chain</h3><p>Execution, consensus, explorer, and node operations.</p></article>
-          <article class="tile"><h3>Financial services</h3><p>Accounts, ledger, cards, and payment APIs — demo mode here.</p></article>
-          <article class="tile"><h3>Governance</h3><p>Validators, registry, lineage, and audit artifacts.</p></article>
-          <article class="tile"><h3>Automation</h3><p>Workflows, dispatch, payroll engines, and maintenance.</p></article>
-          <article class="tile"><h3>Monitoring</h3><p>Health checks, uptime, and observability scripts.</p></article>
+          <article class="tile"><h3>Explorer</h3><p>Blocks, transactions, and addresses — the same layout customers know from Etherscan.</p></article>
+          <article class="tile"><h3>Smart investing</h3><p>Six short lessons, then a recommended mix of cash, BANK, ETH, and BTC.</p></article>
+          <article class="tile"><h3>BitPay</h3><p>Crypto invoices to load the cash ledger. Live invoices when the merchant token is set.</p></article>
+          <article class="tile"><h3>Marqeta</h3><p>Virtual Visa debit issued to the member, freeze and sandbox authorization included.</p></article>
+          <article class="tile"><h3>On-chain audit</h3><p>Every grant, load, trade, lesson, and card event is mined into TBOTF.</p></article>
+          <article class="tile"><h3>Treasury</h3><p>The $250 reserve per founding account funds build-out and extra security.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section hidden" data-page="open">
       <div class="kicker">New founding member</div>
-      <h2>Open a simulated account</h2>
-      <p class="lede">We will credit a paper ledger. There is no charge, no ACH, and no crypto transfer.</p>
+      <h2>Open an account</h2>
+      <p class="lede">Treasury credits $125 cash and $125 BANK. You can load more with BitPay after sign-in.</p>
       <form class="form" id="form-open" style="margin-top:1.5rem;">
         <label for="name">Full name</label>
         <input id="name" name="name" type="text" autocomplete="name" required />
@@ -82,10 +87,10 @@
         <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required />
         <label class="check">
           <input id="agree" type="checkbox" />
-          <span>I understand this is a demonstration. No real money is deposited, invested, or sent to BankChainAI.</span>
+          <span>I understand this is not a chartered bank, balances are not FDIC insured, and BitPay/Marqeta process payments and cards under their programs.</span>
         </label>
         <p class="error" id="open-error" role="alert"></p>
-        <button class="btn gold" id="open-btn" type="submit">Create demo account</button>
+        <button class="btn gold" id="open-btn" type="submit">Create account</button>
       </form>
     </section>
 
@@ -107,25 +112,31 @@
         <div>
           <div class="kicker">Member ledger</div>
           <h2 id="hello">Member</h2>
+          <p class="mono" id="hello-addr"></p>
         </div>
-        <p class="muted">Simulated balances · not withdrawable</p>
+        <p class="muted">Cash + BANK + paper book</p>
       </div>
       <div class="balances">
         <div class="bal cash"><div class="label">Cash ledger</div><div class="value" id="bal-cash">$0</div></div>
         <div class="bal coin"><div class="label">BANK coin</div><div class="value" id="bal-coin">$0</div></div>
-        <div class="bal"><div class="label">Member total</div><div class="value" id="bal-total">$0</div></div>
+        <div class="bal"><div class="label">Portfolio</div><div class="value" id="bal-total">$0</div></div>
+      </div>
+      <div class="hero-actions" style="margin-top:1.25rem;">
+        <a class="btn gold" href="#/load">Load with BitPay</a>
+        <a class="btn ghost" href="#/invest">Invest desk</a>
+        <a class="btn ghost" href="#/card">Marqeta card</a>
       </div>
       <h3 style="margin-top:2rem;">Activity</h3>
       <table>
-        <thead><tr><th>When</th><th>Memo</th><th>Cash</th><th>Coin</th></tr></thead>
+        <thead><tr><th>When</th><th>Memo</th><th>Cash</th><th>Tx</th></tr></thead>
         <tbody id="txn-body"></tbody>
       </table>
     </section>
 
     <section class="section hidden" data-page="admin">
-      <div class="kicker">Admin reserve</div>
+      <div class="kicker">Treasury</div>
       <h2>Platform build & extra security</h2>
-      <p class="lede">Each simulated founding package allocates $250 here. This is an internal demo pool, not customer funds.</p>
+      <p class="lede">Each founding package allocates $250 here from project funding.</p>
       <div class="balances" style="margin-top:1.25rem;">
         <div class="bal reserve"><div class="label">Reserve pool</div><div class="value" id="admin-pool">$0</div></div>
         <div class="bal"><div class="label">Members</div><div class="value" id="admin-count">0</div></div>
@@ -134,18 +145,94 @@
       </div>
       <h3 style="margin-top:2rem;">Members</h3>
       <table>
-        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Cash</th><th>Coin</th></tr></thead>
+        <thead><tr><th>#</th><th>Name</th><th>Address</th><th>Cash</th><th>Coin</th></tr></thead>
         <tbody id="admin-body"></tbody>
       </table>
+    </section>
+
+    <section class="section explorer-wrap hidden" data-page="explorer">
+      <div class="ex-head">
+        <div>
+          <div class="kicker">TBOTF explorer</div>
+          <h2>BankChain explorer</h2>
+        </div>
+        <form class="ex-search" id="ex-search">
+          <label class="sr" for="q">Search</label>
+          <input id="q" type="search" placeholder="Search by tx, address, or block" />
+          <button class="btn" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="ex-stats" id="ex-stats"></div>
+      <p class="error" id="ex-error" role="alert"></p>
+      <div id="ex-view"></div>
+    </section>
+
+    <section class="section hidden" data-page="learn">
+      <div class="kicker">Teaching bank</div>
+      <h2>Smart investing, in six sittings</h2>
+      <p class="lede">Finish lessons to unlock a tighter allocation. Then take it to the invest desk.</p>
+      <div id="learn-list" class="grid-3" style="margin-top:1.5rem;"></div>
+    </section>
+
+    <section class="section hidden" data-page="invest">
+      <div class="kicker">Invest desk</div>
+      <h2>Paper book with a plan</h2>
+      <p class="lede" id="invest-plan"></p>
+      <div class="balances" id="invest-prices"></div>
+      <form class="form" id="form-trade" style="margin-top:1.5rem;">
+        <label for="sym">Asset</label>
+        <select id="sym">
+          <option>BANK</option>
+          <option>ETH</option>
+          <option>BTC</option>
+        </select>
+        <label for="side">Side</label>
+        <select id="side">
+          <option value="buy">Buy</option>
+          <option value="sell">Sell</option>
+        </select>
+        <label for="usd">Amount (USD)</label>
+        <input id="usd" type="number" min="1" step="1" value="10" />
+        <p class="error" id="trade-error" role="alert"></p>
+        <div class="hero-actions">
+          <button class="btn gold" type="submit">Place trade</button>
+          <button class="btn ghost" id="alloc-btn" type="button">Apply smart allocation</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section hidden" data-page="load">
+      <div class="kicker">BitPay</div>
+      <h2>Load your cash ledger</h2>
+      <p class="lede">BitPay invoices crypto at a locked rate. The ledger credits when the invoice completes. Production invoices require the BitPay merchant token.</p>
+      <form class="form" id="form-load">
+        <label for="load-amt">Amount (USD)</label>
+        <select id="load-amt">
+          <option value="25">$25</option>
+          <option value="50" selected>$50</option>
+          <option value="100">$100</option>
+          <option value="250">$250</option>
+        </select>
+        <p class="error" id="load-error" role="alert"></p>
+        <button class="btn gold" type="submit">Create BitPay invoice</button>
+      </form>
+      <div id="load-result" style="margin-top:1.25rem;"></div>
+    </section>
+
+    <section class="section hidden" data-page="card">
+      <div class="kicker">Marqeta</div>
+      <h2>Virtual debit card</h2>
+      <p class="lede">Issued on the Marqeta program. Freeze it any time. Sandbox authorizations debit the cash ledger and post to the explorer.</p>
+      <div id="card-view"></div>
+      <p class="error" id="card-error" role="alert"></p>
     </section>
 
     <section class="section hidden" data-page="legal">
       <div class="legal">
         <div class="kicker">Disclosures</div>
-        <h2>This is not a licensed bank.</h2>
-        <p>The Blocks of the Future Bank / BankChainAI website you are using is a software demonstration. It does not take deposits, issue real BANK coin, move cash, or provide FDIC insurance.</p>
-        <p>The $500 founding package is a teaching ledger: $125 simulated cash, $125 simulated BANK coin to the member, and $250 recorded as a platform/security reserve. No payment is processed.</p>
-        <p>Live deposit-taking, money transmission, or securities activity would require the proper US licenses, a chartered partner, and KYC/AML. That is not enabled here.</p>
+        <h2>Not a chartered bank.</h2>
+        <p>The Blocks of the Future Bank is a BankChainAI product. It is not an FDIC-insured depository. Crypto loads are processed by BitPay. Debit cards are issued through Marqeta under their bank-partner program.</p>
+        <p>The $500 founding package is treasury funding: $125 cash, $125 BANK coin, $250 platform and security reserve.</p>
         <p>Questions: Theblocksofthefuture@gmail.com</p>
       </div>
     </section>
@@ -153,7 +240,7 @@
 
   <footer class="footer">
     <span>BankChainAI · The Blocks of the Future</span>
-    <span>Demo environment · simulated ledger</span>
+    <span>Chain ID 2026 · TBOTF</span>
   </footer>
   <script src="./app.js"></script>
 </body>

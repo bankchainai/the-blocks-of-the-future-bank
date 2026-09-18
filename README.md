@@ -1,13 +1,14 @@
 # The Blocks of the Future Bank
 
-Public customer demo for BankChainAI.
+Teaching bank on the TBOTF chain (id 2026).
 
-This site models a **$500 founding package** as a teaching ledger:
+- Ethereum-style explorer
+- Smart-investing lessons and paper book
+- BitPay account loads (live invoices when `BITPAY_POS_TOKEN` is set)
+- Marqeta virtual debit cards
 
-- $125 simulated cash
-- $125 simulated BANK coin
-- $250 recorded as platform build and extra security reserve
+Founding package from project treasury: $125 cash, $125 BANK, $250 platform/security.
 
-**No real money is collected.** This is not a licensed bank and balances are not FDIC insured.
+Not a chartered bank. Not FDIC insured.
 
-Live demo in the BankChainAI workspace: dashboard slug `tbotf-bank`.
+Live: https://bankchainai.github.io/the-blocks-of-the-future-bank/
